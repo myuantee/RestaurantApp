@@ -771,6 +771,8 @@ public class RestaurantForm extends javax.swing.JFrame {
     private javax.swing.JSpinner tablenoSpinner;
     // End of variables declaration//GEN-END:variables
     private void resetFunction(){
+        
+        // reset all selection
         receiptPane.setText(null);
         mainMealGroup.clearSelection();
         CoffeeCheckBox.setSelected(false);
@@ -786,7 +788,7 @@ public class RestaurantForm extends javax.swing.JFrame {
         coffeeQuantity.setValue(0);
         saladQuantity.setValue(0);
         ffQuantity.setValue(0);
-        beanQuantity.setValue(0);
+        beanQuantity.setValue(1);
         
         tableno = q1 = sd1 = sd2 = sd3 = b1 = b2 = 0 ;
         subnetamount = mainmealAmount = saladAmount = ffAmount = bbAmount = sdAmount = coffeeAmount = 0;
