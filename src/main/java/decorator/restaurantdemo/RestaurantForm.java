@@ -92,7 +92,7 @@ public class RestaurantForm extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Ink Free", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Welcome to Restaurant xyx");
+        jLabel1.setText("Welcome to Restaurant Cincai");
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Ink Free", 1, 24)); // NOI18N
@@ -112,7 +112,7 @@ public class RestaurantForm extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -428,7 +428,9 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void bakedBeansCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bakedBeansCheckBoxActionPerformed
         // TODO add your handling code here:
         if (bakedBeansCheckBox.isSelected()){
-            beanQuantity.setValue(1);
+            if((int)beanQuantity.getValue() < 1){
+                beanQuantity.setValue(1);
+            }
             sd3 = (int)beanQuantity.getValue();
         }else{
             beanQuantity.setValue(0);
@@ -439,7 +441,9 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void frenchfriesCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_frenchfriesCheckBoxActionPerformed
         // TODO add your handling code here:
         if (frenchfriesCheckBox.isSelected()){
-            ffQuantity.setValue(1);
+            if((int)ffQuantity.getValue() < 1){
+                ffQuantity.setValue(1);
+            }
             sd2 = (int)ffQuantity.getValue();
         }else{
             ffQuantity.setValue(0);
@@ -450,7 +454,9 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void saladCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saladCheckBoxActionPerformed
         // TODO add your handling code here:
         if (saladCheckBox.isSelected()){
-            saladQuantity.setValue(1);
+            if((int)saladQuantity.getValue() < 1){
+                saladQuantity.setValue(1);
+            }
             sd1 = (int)saladQuantity.getValue();
             
         }else{
@@ -462,7 +468,9 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void CoffeeCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoffeeCheckBoxActionPerformed
         // TODO add your handling code here:
         if (CoffeeCheckBox.isSelected()){
-            coffeeQuantity.setValue(1);
+            if((int)coffeeQuantity.getValue() < 1){
+                coffeeQuantity.setValue(1);
+            }
             b2 = (int)coffeeQuantity.getValue();
         }else{
             coffeeQuantity.setValue(0);
@@ -473,6 +481,9 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void SDCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SDCheckBoxActionPerformed
         // TODO add your handling code here:
         if (SDCheckBox.isSelected()){
+            if((int)SDQuantity.getValue() < 1){
+                SDQuantity.setValue(1);
+            }
             SDQuantity.setValue(1);
             b1 = (int)SDQuantity.getValue();
         }else{
@@ -484,7 +495,9 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void mainMealRadioCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainMealRadioCActionPerformed
         // TODO add your handling code here:
         if (mainMealRadioC.isSelected()) {
-            mealCquantity.setValue(1);
+            if((int)mealCquantity.getValue() < 1){
+                mealCquantity.setValue(1);
+            }
             mealAquantity.setValue(0);
             mealBquantity.setValue(0);
             q1 = (int)mealCquantity.getValue();
@@ -495,7 +508,9 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void mainMealRadioBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainMealRadioBActionPerformed
         // TODO add your handling code here:
         if (mainMealRadioB.isSelected()) {
-            mealBquantity.setValue(1);
+            if((int)mealBquantity.getValue() < 1){
+                mealBquantity.setValue(1);
+            }
             mealAquantity.setValue(0);
             mealCquantity.setValue(0);
             q1 = (int)mealBquantity.getValue();
@@ -506,7 +521,10 @@ public class RestaurantForm extends javax.swing.JFrame {
     private void mainMealRadioAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainMealRadioAActionPerformed
         // TODO add your handling code here:
         if (mainMealRadioA.isSelected()) {
-            mealAquantity.setValue(1);
+            if((int)mealAquantity.getValue() < 1){
+                mealAquantity.setValue(1);
+            }
+            
             mealBquantity.setValue(0);
             mealCquantity.setValue(0);
             q1 = (int)mealAquantity.getValue();
@@ -566,7 +584,7 @@ public class RestaurantForm extends javax.swing.JFrame {
         // hide receipt button
         receiptButton.setVisible(false);
         
-        insertText("Restaurant XYX",header);
+        insertText("Restaurant Cincai",header);
         
         //Displaying current date 
         LocalDate nowDate = LocalDate.now();
@@ -593,8 +611,8 @@ public class RestaurantForm extends javax.swing.JFrame {
             insertText("\nSubnet Total :",font2);
             insertText("\t\tRM" + subnetamount,font);
             insertText("\n---------------------------------------------------------------------",grayline);
-            insertText("\nSales tax :",font2);
-            insertText("\t\t\tRM" + taxAmount,font);
+            insertText("\nSales tax (6%) :",font2);
+            insertText("\t\tRM" + taxAmount,font);
             insertText("\n---------------------------------------------------------------------",grayline);
             insertText("\nTotal to pay :",font2);
             insertText("\t\tRM" + totaltopay,font);
@@ -612,8 +630,8 @@ public class RestaurantForm extends javax.swing.JFrame {
             insertText("\nSubnet Total :",font2);
             insertText("\t\tRM" + subnetamount,font);
             insertText("\n---------------------------------------------------------------------",grayline);
-            insertText("\nSales tax :",font2);
-            insertText("\t\t\tRM" + taxAmount,font);
+            insertText("\nSales tax (6%) :",font2);
+            insertText("\t\tRM" + taxAmount,font);
             insertText("\n---------------------------------------------------------------------",grayline);
             insertText("\nTotal to pay :",font2);
             insertText("\t\tRM" + totaltopay,font);
@@ -631,8 +649,8 @@ public class RestaurantForm extends javax.swing.JFrame {
             insertText("\nSubnet Total :",font2);
             insertText("\t\tRM" + subnetamount,font);
             insertText("\n---------------------------------------------------------------------",grayline);
-            insertText("\nSales tax :",font2);
-            insertText("\t\t\tRM" + taxAmount,font);
+            insertText("\nSales tax (6%) :",font2);
+            insertText("\t\tRM" + taxAmount,font);
             insertText("\n---------------------------------------------------------------------",grayline);
             insertText("\nTotal to pay :",font2);
             insertText("\t\tRM" + totaltopay,font);
