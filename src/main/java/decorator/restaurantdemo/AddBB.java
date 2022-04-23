@@ -26,4 +26,3 @@ public class AddBB extends RestaurantDecorator {
         return super.prices(q1,sd1,sd2,sd3,b1,b2) + sd3*7.00;
     }
 }
-//test push

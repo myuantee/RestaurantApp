@@ -807,10 +807,12 @@ public class RestaurantForm extends javax.swing.JFrame {
         saladQuantity.setValue(0);
         ffQuantity.setValue(0);
         beanQuantity.setValue(0);
+        tablenoSpinner.setValue(1);
         
         tableno = q1 = sd1 = sd2 = sd3 = b1 = b2 = 0 ;
         subnetamount = mainmealAmount = saladAmount = ffAmount = bbAmount = sdAmount = coffeeAmount = 0;
         
+        JOptionPane.showMessageDialog(RestaurantForm.this,"Reset success !");
         
     }
 }
