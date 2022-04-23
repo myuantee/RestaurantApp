@@ -10,19 +10,19 @@ package decorator.restaurantdemo;
  */
 public abstract class RestaurantDecorator implements Restaurant {
 
-    private Restaurant newRestaurant;
+    private Restaurant newSet;
 
-    public RestaurantDecorator(Restaurant newRestaurant) {
-        this.newRestaurant = newRestaurant;
+    public RestaurantDecorator(Restaurant newSet) {
+        this.newSet = newSet;
     }
 
     @Override
     public String meals(int q1, int sd1,int sd2,int sd3,int b1,int b2) {
-        return newRestaurant.meals(q1,sd1,sd2,sd3,b1,b2);
+        return newSet.meals(q1,sd1,sd2,sd3,b1,b2);
     }
 
     @Override
     public double prices(int q1, int sd1,int sd2,int sd3,int b1,int b2) {
-        return newRestaurant.prices(q1,sd1,sd2,sd3,b1,b2);
+        return newSet.prices(q1,sd1,sd2,sd3,b1,b2);
     }
 }

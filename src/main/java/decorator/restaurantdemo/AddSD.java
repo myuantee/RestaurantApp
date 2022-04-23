@@ -10,8 +10,8 @@ package decorator.restaurantdemo;
  */
 public class AddSD extends RestaurantDecorator {
 
-    public AddSD(Restaurant newRestaurant) {
-        super(newRestaurant);
+    public AddSD(Restaurant newSet) {
+        super(newSet);
     }
 
     @Override
